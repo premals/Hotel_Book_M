@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Hotel_Booking_DemoModel_tblHtlReg_DTL_P1_10.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Hotel_Booking_Demo.dbo.tblHtlReg_DTL_P1_10' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="tblHtlReg_DTL_P1_10">
+          <Key>
+            <PropertyRef Name="HotelID" />
+            <PropertyRef Name="HotelName" />
+            <PropertyRef Name="LandMark" />
+            <PropertyRef Name="HotelAddress1" />
+            <PropertyRef Name="HotelAddress2" />
+            <PropertyRef Name="Street" />
+            <PropertyRef Name="City" />
+            <PropertyRef Name="PinCode" />
+            <PropertyRef Name="State" />
+            <PropertyRef Name="CheckInTime" />
+            <PropertyRef Name="IsAcive" />
+            <PropertyRef Name="CreateBy" />
+            <PropertyRef Name="CreateIP" />
+            <PropertyRef Name="CreateDate" />
+            <PropertyRef Name="UpdateBy" />
+            <PropertyRef Name="UpdateIP" />
+            <PropertyRef Name="UpdateDate" />
+          </Key>
+          <Property Name="HotelID" Type="int" Nullable="false" />
+          <Property Name="HotelName" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="HotelDisplayName" Type="varchar" MaxLength="50" />
+          <Property Name="LandMark" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="HotelAddress1" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="HotelAddress2" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Street" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="City" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="PinCode" Type="int" Nullable="false" />
+          <Property Name="State" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Plan1" Type="bit" />
+          <Property Name="Plan1Rooms" Type="tinyint" />
+          <Property Name="PriceO10Hr" Type="int" />
+          <Property Name="PriceS10Hr" Type="int" />
+          <Property Name="CheckInTime" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="ForUnMarriedLocal" Type="bit" />
+          <Property Name="Star" Type="tinyint" />
+          <Property Name="IsAcive" Type="bit" Nullable="false" />
+          <Property Name="CreateBy" Type="int" Nullable="false" />
+          <Property Name="CreateIP" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="UpdateBy" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="UpdateIP" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+          <Property Name="CommandID" Type="tinyint" />
+        </EntityType>
+        <EntityContainer Name="Hotel_Booking_DemoModel_tblHtlReg_DTL_P1_10StoreContainer">
+          <EntitySet Name="tblHtlReg_DTL_P1_10" EntityType="Self.tblHtlReg_DTL_P1_10" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[tblHtlReg_DTL_P1_10].[HotelID] AS [HotelID], 
+[tblHtlReg_DTL_P1_10].[HotelName] AS [HotelName], 
+[tblHtlReg_DTL_P1_10].[HotelDisplayName] AS [HotelDisplayName], 
+[tblHtlReg_DTL_P1_10].[LandMark] AS [LandMark], 
+[tblHtlReg_DTL_P1_10].[HotelAddress1] AS [HotelAddress1], 
+[tblHtlReg_DTL_P1_10].[HotelAddress2] AS [HotelAddress2], 
+[tblHtlReg_DTL_P1_10].[Street] AS [Street], 
+[tblHtlReg_DTL_P1_10].[City] AS [City], 
+[tblHtlReg_DTL_P1_10].[PinCode] AS [PinCode], 
+[tblHtlReg_DTL_P1_10].[State] AS [State], 
+[tblHtlReg_DTL_P1_10].[Plan1] AS [Plan1], 
+[tblHtlReg_DTL_P1_10].[Plan1Rooms] AS [Plan1Rooms], 
+[tblHtlReg_DTL_P1_10].[PriceO10Hr] AS [PriceO10Hr], 
+[tblHtlReg_DTL_P1_10].[PriceS10Hr] AS [PriceS10Hr], 
+[tblHtlReg_DTL_P1_10].[CheckInTime] AS [CheckInTime], 
+[tblHtlReg_DTL_P1_10].[ForUnMarriedLocal] AS [ForUnMarriedLocal], 
+[tblHtlReg_DTL_P1_10].[Star] AS [Star], 
+[tblHtlReg_DTL_P1_10].[IsAcive] AS [IsAcive], 
+[tblHtlReg_DTL_P1_10].[CreateBy] AS [CreateBy], 
+[tblHtlReg_DTL_P1_10].[CreateIP] AS [CreateIP], 
+[tblHtlReg_DTL_P1_10].[CreateDate] AS [CreateDate], 
+[tblHtlReg_DTL_P1_10].[UpdateBy] AS [UpdateBy], 
+[tblHtlReg_DTL_P1_10].[UpdateIP] AS [UpdateIP], 
+[tblHtlReg_DTL_P1_10].[UpdateDate] AS [UpdateDate], 
+[tblHtlReg_DTL_P1_10].[CommandID] AS [CommandID]
+FROM [dbo].[tblHtlReg_DTL_P1_10] AS [tblHtlReg_DTL_P1_10]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Hotel_Booking_DemoModel_tblHtlReg_DTL_P1_10" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tblHtlReg_DTL_P1_10">
+          <Key>
+            <PropertyRef Name="HotelID" />
+            <PropertyRef Name="HotelName" />
+            <PropertyRef Name="LandMark" />
+            <PropertyRef Name="HotelAddress1" />
+            <PropertyRef Name="HotelAddress2" />
+            <PropertyRef Name="Street" />
+            <PropertyRef Name="City" />
+            <PropertyRef Name="PinCode" />
+            <PropertyRef Name="State" />
+            <PropertyRef Name="CheckInTime" />
+            <PropertyRef Name="IsAcive" />
+            <PropertyRef Name="CreateBy" />
+            <PropertyRef Name="CreateIP" />
+            <PropertyRef Name="CreateDate" />
+            <PropertyRef Name="UpdateBy" />
+            <PropertyRef Name="UpdateIP" />
+            <PropertyRef Name="UpdateDate" />
+          </Key>
+          <Property Name="HotelID" Type="Int32" Nullable="false" />
+          <Property Name="HotelName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HotelDisplayName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LandMark" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HotelAddress1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HotelAddress2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Street" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="City" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PinCode" Type="Int32" Nullable="false" />
+          <Property Name="State" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Plan1" Type="Boolean" />
+          <Property Name="Plan1Rooms" Type="Byte" />
+          <Property Name="PriceO10Hr" Type="Int32" />
+          <Property Name="PriceS10Hr" Type="Int32" />
+          <Property Name="CheckInTime" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ForUnMarriedLocal" Type="Boolean" />
+          <Property Name="Star" Type="Byte" />
+          <Property Name="IsAcive" Type="Boolean" Nullable="false" />
+          <Property Name="CreateBy" Type="Int32" Nullable="false" />
+          <Property Name="CreateIP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdateBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UpdateIP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UpdateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CommandID" Type="Byte" />
+        </EntityType>
+        <EntityContainer Name="Hotel_Booking_DemoEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tblHtlReg_DTL_P1_10" EntityType="Self.tblHtlReg_DTL_P1_10" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Hotel_Booking_DemoModel_tblHtlReg_DTL_P1_10StoreContainer" CdmEntityContainer="Hotel_Booking_DemoEntities2">
+          <EntitySetMapping Name="tblHtlReg_DTL_P1_10">
+            <EntityTypeMapping TypeName="Hotel_Booking_DemoModel_tblHtlReg_DTL_P1_10.tblHtlReg_DTL_P1_10">
+              <MappingFragment StoreEntitySet="tblHtlReg_DTL_P1_10">
+                <ScalarProperty Name="HotelID" ColumnName="HotelID" />
+                <ScalarProperty Name="HotelName" ColumnName="HotelName" />
+                <ScalarProperty Name="HotelDisplayName" ColumnName="HotelDisplayName" />
+                <ScalarProperty Name="LandMark" ColumnName="LandMark" />
+                <ScalarProperty Name="HotelAddress1" ColumnName="HotelAddress1" />
+                <ScalarProperty Name="HotelAddress2" ColumnName="HotelAddress2" />
+                <ScalarProperty Name="Street" ColumnName="Street" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="PinCode" ColumnName="PinCode" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Plan1" ColumnName="Plan1" />
+                <ScalarProperty Name="Plan1Rooms" ColumnName="Plan1Rooms" />
+                <ScalarProperty Name="PriceO10Hr" ColumnName="PriceO10Hr" />
+                <ScalarProperty Name="PriceS10Hr" ColumnName="PriceS10Hr" />
+                <ScalarProperty Name="CheckInTime" ColumnName="CheckInTime" />
+                <ScalarProperty Name="ForUnMarriedLocal" ColumnName="ForUnMarriedLocal" />
+                <ScalarProperty Name="Star" ColumnName="Star" />
+                <ScalarProperty Name="IsAcive" ColumnName="IsAcive" />
+                <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+                <ScalarProperty Name="CreateIP" ColumnName="CreateIP" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+                <ScalarProperty Name="UpdateIP" ColumnName="UpdateIP" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="CommandID" ColumnName="CommandID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
