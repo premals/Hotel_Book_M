@@ -28,12 +28,12 @@ namespace Entity
         public Nullable<System.DateTime> CheckOutDate { get; set; }
         public string CheckInTime { get; set; }
         public int Length { get; set; }
-        public Nullable<int> HotelID { get; set; }
-        public Nullable<byte> TotalRooms { get; set; }
+        public int HotelID { get; set; }
+        public int TotalRooms { get; set; }
         public string DiscountCode { get; set; }
         public string VerificationCode { get; set; }
-        public Nullable<bool> OnSitePay { get; set; }
-        public Nullable<bool> BankPay { get; set; }
+        public bool OnSitePay { get; set; }
+        public bool BankPay { get; set; }
         public int Payment { get; set; }
         public bool BookCheck { get; set; }
         public bool SuccessBook { get; set; }
@@ -41,9 +41,9 @@ namespace Entity
         public bool IsActive { get; set; }
         public int CreateBy { get; set; }
         public string CreateIP { get; set; }
-        public System.DateTime CreateDate { get; set; }
+        public DateTime CreateDate { get; set; }
         public int UpdateBy { get; set; }
         public string UpdateIP { get; set; }
-        public System.DateTime UpdateDate { get; set; }
+        public DateTime UpdateDate { get; set; }
     }
 }

@@ -1,6 +1,5 @@
 H:\Final_Project\Hotel_Book\Entity\bin\Debug\Entity.dll
 H:\Final_Project\Hotel_Book\Entity\bin\Debug\Entity.pdb
-H:\Final_Project\Hotel_Book\Entity\obj\Debug\Entity.csprojResolveAssemblyReference.cache
 H:\Final_Project\Hotel_Book\Entity\obj\Debug\Entity.dll
 H:\Final_Project\Hotel_Book\Entity\obj\Debug\Entity.pdb
 H:\Final_Project\Hotel_Book\Entity\bin\Debug\Entity.dll.config
