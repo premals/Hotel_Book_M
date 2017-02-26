@@ -7,3 +7,5 @@ H:\Final_Project\Hotel_Book\BuissnessLayer\bin\Debug\Entity.pdb
 H:\Final_Project\Hotel_Book\BuissnessLayer\obj\Debug\BuissnessLayer.csprojResolveAssemblyReference.cache
 H:\Final_Project\Hotel_Book\BuissnessLayer\obj\Debug\BuissnessLayer.dll
 H:\Final_Project\Hotel_Book\BuissnessLayer\obj\Debug\BuissnessLayer.pdb
+H:\Final_Project\Hotel_Book\BuissnessLayer\bin\Debug\EntityFramework.dll
+H:\Final_Project\Hotel_Book\BuissnessLayer\bin\Debug\EntityFramework.xml

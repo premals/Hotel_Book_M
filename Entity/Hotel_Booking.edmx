@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Hotel_Booking_DemoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tblHtl_Booking_Plan1">
+          <Key>
+            <PropertyRef Name="Index_ID" />
+            <PropertyRef Name="BookingID" />
+          </Key>
+          <Property Name="Index_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BookingID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="CustomerID" Type="int" Nullable="false" />
+          <Property Name="CustomerName" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="CustomerEmail" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PhoneNo" Type="bigint" Nullable="false" />
+          <Property Name="CustomerBDate" Type="date" Nullable="false" />
+          <Property Name="People" Type="int" Nullable="false" />
+          <Property Name="BookedRooms" Type="tinyint" Nullable="false" />
+          <Property Name="Plan1" Type="bit" Nullable="false" />
+          <Property Name="CheckInDate" Type="date" Nullable="false" />
+          <Property Name="CheckOutDate" Type="date" />
+          <Property Name="CheckInTime" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="Length" Type="int" Nullable="false" />
+          <Property Name="HotelID" Type="int" />
+          <Property Name="TotalRooms" Type="tinyint" />
+          <Property Name="DiscountCode" Type="varchar" MaxLength="15" />
+          <Property Name="VerificationCode" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="OnSitePay" Type="bit" />
+          <Property Name="BankPay" Type="bit" />
+          <Property Name="Payment" Type="int" Nullable="false" />
+          <Property Name="BookCheck" Type="bit" Nullable="false" />
+          <Property Name="SuccessBook" Type="bit" Nullable="false" />
+          <Property Name="CommandID" Type="tinyint" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreateBy" Type="int" Nullable="false" />
+          <Property Name="CreateIP" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="UpdateBy" Type="int" Nullable="false" />
+          <Property Name="UpdateIP" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Hotel_Booking_DemoModelStoreContainer">
+          <EntitySet Name="tblHtl_Booking_Plan1" EntityType="Self.tblHtl_Booking_Plan1" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Hotel_Booking_DemoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tblHtl_Booking_Plan1">
+          <Key>
+            <PropertyRef Name="Index_ID" />
+            <PropertyRef Name="BookingID" />
+          </Key>
+          <Property Name="Index_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BookingID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CustomerID" Type="Int32" Nullable="false" />
+          <Property Name="CustomerName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CustomerEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PhoneNo" Type="Int64" Nullable="false" />
+          <Property Name="CustomerBDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="People" Type="Int32" Nullable="false" />
+          <Property Name="BookedRooms" Type="Byte" Nullable="false" />
+          <Property Name="Plan1" Type="Boolean" Nullable="false" />
+          <Property Name="CheckInDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="CheckOutDate" Type="DateTime" Precision="0" />
+          <Property Name="CheckInTime" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Length" Type="Int32" Nullable="false" />
+          <Property Name="HotelID" Type="Int32" />
+          <Property Name="TotalRooms" Type="Byte" />
+          <Property Name="DiscountCode" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="VerificationCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="OnSitePay" Type="Boolean" />
+          <Property Name="BankPay" Type="Boolean" />
+          <Property Name="Payment" Type="Int32" Nullable="false" />
+          <Property Name="BookCheck" Type="Boolean" Nullable="false" />
+          <Property Name="SuccessBook" Type="Boolean" Nullable="false" />
+          <Property Name="CommandID" Type="Byte" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreateBy" Type="Int32" Nullable="false" />
+          <Property Name="CreateIP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdateBy" Type="Int32" Nullable="false" />
+          <Property Name="UpdateIP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UpdateDate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="Hotel_Booking_DemoEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tblHtl_Booking_Plan1" EntityType="Self.tblHtl_Booking_Plan1" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Hotel_Booking_DemoModelStoreContainer" CdmEntityContainer="Hotel_Booking_DemoEntities">
+          <EntitySetMapping Name="tblHtl_Booking_Plan1">
+            <EntityTypeMapping TypeName="Hotel_Booking_DemoModel.tblHtl_Booking_Plan1">
+              <MappingFragment StoreEntitySet="tblHtl_Booking_Plan1">
+                <ScalarProperty Name="Index_ID" ColumnName="Index_ID" />
+                <ScalarProperty Name="BookingID" ColumnName="BookingID" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="CustomerEmail" ColumnName="CustomerEmail" />
+                <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+                <ScalarProperty Name="CustomerBDate" ColumnName="CustomerBDate" />
+                <ScalarProperty Name="People" ColumnName="People" />
+                <ScalarProperty Name="BookedRooms" ColumnName="BookedRooms" />
+                <ScalarProperty Name="Plan1" ColumnName="Plan1" />
+                <ScalarProperty Name="CheckInDate" ColumnName="CheckInDate" />
+                <ScalarProperty Name="CheckOutDate" ColumnName="CheckOutDate" />
+                <ScalarProperty Name="CheckInTime" ColumnName="CheckInTime" />
+                <ScalarProperty Name="Length" ColumnName="Length" />
+                <ScalarProperty Name="HotelID" ColumnName="HotelID" />
+                <ScalarProperty Name="TotalRooms" ColumnName="TotalRooms" />
+                <ScalarProperty Name="DiscountCode" ColumnName="DiscountCode" />
+                <ScalarProperty Name="VerificationCode" ColumnName="VerificationCode" />
+                <ScalarProperty Name="OnSitePay" ColumnName="OnSitePay" />
+                <ScalarProperty Name="BankPay" ColumnName="BankPay" />
+                <ScalarProperty Name="Payment" ColumnName="Payment" />
+                <ScalarProperty Name="BookCheck" ColumnName="BookCheck" />
+                <ScalarProperty Name="SuccessBook" ColumnName="SuccessBook" />
+                <ScalarProperty Name="CommandID" ColumnName="CommandID" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+                <ScalarProperty Name="CreateIP" ColumnName="CreateIP" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+                <ScalarProperty Name="UpdateIP" ColumnName="UpdateIP" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

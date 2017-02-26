@@ -5,3 +5,5 @@ H:\Final_Project\Hotel_Book\DataLayer\bin\Debug\Entity.pdb
 H:\Final_Project\Hotel_Book\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
 H:\Final_Project\Hotel_Book\DataLayer\obj\Debug\DataLayer.dll
 H:\Final_Project\Hotel_Book\DataLayer\obj\Debug\DataLayer.pdb
+H:\Final_Project\Hotel_Book\DataLayer\bin\Debug\EntityFramework.dll
+H:\Final_Project\Hotel_Book\DataLayer\bin\Debug\EntityFramework.xml

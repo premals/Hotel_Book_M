@@ -30,8 +30,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,9 +49,56 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Corp_Signup.cs" />
     <Compile Include="HotelSignupEntity.cs" />
+    <Compile Include="Hotel_Booking.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Hotel_Booking.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Hotel_Booking.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Hotel_Booking.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Hotel_Booking.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Hotel_Booking.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tblHtl_Booking_Plan1.cs">
+      <DependentUpon>Hotel_Booking.tt</DependentUpon>
+    </Compile>
     <Compile Include="UserSignup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Hotel_Booking.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Hotel_Booking.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Hotel_Booking.edmx.diagram">
+      <DependentUpon>Hotel_Booking.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Hotel_Booking.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Hotel_Booking.edmx</DependentUpon>
+      <LastGenOutput>Hotel_Booking.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Hotel_Booking.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Hotel_Booking.edmx</DependentUpon>
+      <LastGenOutput>Hotel_Booking.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
